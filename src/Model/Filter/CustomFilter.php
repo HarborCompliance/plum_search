@@ -50,7 +50,7 @@ class CustomFilter extends AbstractFilter
      * @param  array $data Filters values.
      * @return \Cake\ORM\Query
      */
-    protected function _buildQuery(Query $query, string $field, $value, array $data = []): Query
+    protected function _buildQuery(Query $query, $field, $value, array $data = []): Query
     {
         $method = $this->getConfig('method');
         if (is_callable($method)) {
